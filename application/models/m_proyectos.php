@@ -76,6 +76,10 @@ class M_proyectos extends CI_Model {
         foreach ($query->result() as $row) {
             $grafica = $row->grafica;
         }
+        //var_dump($grafica);
+        if(empty($grafica)){
+            $grafica = '[]';
+        }
         return $grafica;
     }
 
